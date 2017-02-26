@@ -1,0 +1,11 @@
+{
+  "name": "mbFlexProject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "author": "JL",
+  "license": "MIT",
+  "devDependencies": {
+    "handlebars": "^4.0.6"
+  }
+}

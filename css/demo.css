@@ -1,0 +1,12 @@
+.item-section {
+  min-height: 100%;
+  background: #ee0a3b;
+  position: relative;
+  font-size: 12px;
+}
+.item-section .item-section_header {
+  text-align: center;
+}
+.item-section .item-section_header img {
+  width: 10rem;
+}

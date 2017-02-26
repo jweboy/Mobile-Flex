@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="./css/demo.css">
+    <script src="./js/flexible_css.debug.js" charset="utf-8"></script>
+    <script src="./js/flexible.debug.js" charset="utf-8"></script>
+    <title>flexible</title>
+  </head>
+  <body>
+    <div class="">
+      <a href="http://huodong.m.taobao.com/act/yibo.html" target="_blank">源地址</a>
+    </div>
+    <div id="list"></div>
+    <script type="text/x-handlebars-template" id="listTpl">
+      <div class="html_content">
+        <div class="item-section">
+          <div class="item-section_header">
+            <h2><img src="{{brannerImag}}" alt=""></h2>
+          </div>
+          <ul>
+            {{#items}}
+            <li data-repeat="items" class="flag" role="link" href="{{itemLink}}">
+              <a class="figure flag-item" href="{{itemLink}}">
+                <img src="{{imgSrc}}" alt="">
+              </a>
+              <div class="figcaption flag-item">
+                <div class="flag-title"><a href="{{itemLink}}" title="">{{poductName}}</a></div>
+                <div class="flag-price"><span>双11价</span><strong>¥{{price}}</strong><small>({{preferential}})</small></div>
+                <div class="flag-type">{{activityType}}</div>
+                <a class="flag-btn" href="{{shopLink}}">{{activeName}}</a>
+              </div>
+            </li>
+            {{/items}}
+          </ul>
+        </div>
+      </div>
+    </script>
+    <script src="./js/handlebars.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+      var source = document.getElementById('listTpl').innerHTML;
+      var template = Handlebars.compile(source);
+      var data = {
+        brannerImag:"http://gw.alicdn.com/mt/TB1PNLZKXXXXXaTXXXXXXXXXXXX-750-481.jpg",
+        items:[{
+            "itemLink": "##",
+            "imgSrc": "https://placeimg.com/350/350/people/grayscale",
+            "poductName":"Carter's1年式灰色长袖连体衣包脚爬服全棉鲸鱼男婴儿童装115G093",
+            "price": "299.06",
+            "preferential": "满400减100",
+            "activityType": "1小时内热卖5885件",
+            "shopLink":"##",
+            "activeName": "马上抢！"
+        },{
+            "itemLink": "##",
+            "imgSrc": "https://placeimg.com/350/350/people/grayscale",
+            "poductName":"Nike耐克官方ZOOM KOBE VENOMENON 5 EP 科比男子篮球鞋815757",
+            "price": "699.50",
+            "preferential": "满300减150",
+            "activityType": "6744人正在疯抢",
+            "shopLink":"##",
+            "activeName": "马上抢！"
+        },{
+            "itemLink": "##",
+            "imgSrc": "https://placeimg.com/350/350/people/grayscale",
+            "poductName":"现货【送皮套+钢膜+耳机】Xiaomi/小米 红米Note2手机note2",
+            "price": "799.00",
+            "preferential": "满300减150",
+            "activityType": "7833人正在疯抢",
+            "shopLink":"##",
+            "activeName": "马上抢！"
+        },{
+            "itemLink": "##",
+            "imgSrc": "https://placeimg.com/350/350/people/grayscale",
+            "poductName":"ONLY2015秋装新品七分袖弹力修身针织衫女",
+            "price": "299.00",
+            "preferential": "满300减100",
+            "activityType": "2379人想买",
+            "shopLink":"##",
+            "activeName": "马上抢！"
+        },{
+            "itemLink": "##",
+            "imgSrc": "https://placeimg.com/350/350/people/grayscale",
+            "poductName":"Levi's李维斯513春季男士修身直筒牛仔裤长裤",
+            "price": "399.00",
+            "preferential": "满300减100",
+            "activityType": "预热期加购TOP1",
+            "shopLink":"##",
+            "activeName": "马上抢！"
+        },{
+            "itemLink": "##",
+            "imgSrc": "https://placeimg.com/350/350/people/grayscale",
+            "poductName":"Levi's李维斯513春季男士修身直筒牛仔裤长裤",
+            "price": "399.00",
+            "preferential": "满300减100",
+            "activityType": "预热期加购TOP1",
+            "shopLink":"##",
+            "activeName": "马上抢！"
+        }]
+      }
+      var html = template(data);
+      document.getElementById('list').innerHTML = html;
+
+    </script>
+  </body>
+</html>
